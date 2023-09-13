@@ -1,0 +1,212 @@
+.education {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0;
+
+  @include vp-1199 {
+    padding: 5px 0 55px;
+    border-bottom: none;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.education__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  padding-bottom: 36px;
+  margin: 16px 90px 0 120px;
+  align-items: center;
+
+  @include vp-1199 {
+    margin-left: 45px;
+    flex-wrap: wrap;
+    gap: 95px 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    margin-top: 10px;
+    margin-left: 5px;
+    min-width: 290px;
+    gap: 25px;
+    padding-left: 30px;
+  }
+}
+
+.education__item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: left;
+  max-width: 275px;
+  display: flex;
+  margin-right: 41px;
+  align-items: end;
+
+  @include vp-1199 {
+    max-width: 295px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 290px;
+  }
+}
+
+.education__item:last-of-type {
+  @include vp-1199 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  @include vp-767 {
+    grid-area: auto;
+  }
+}
+
+.education__item:first-of-type::after {
+  @include vp-1199 {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 1px;
+    bottom: 60%;
+    background-color: rgba(2, 102, 193, 0.2);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.education__item:last-of-type::after {
+  @include vp-1199 {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 1px;
+    top: 55%;
+    background-color: rgba(2, 102, 193, 0.2);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.education__item:nth-last-of-type(3n)::after {
+  @include vp-1199 {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 52px;
+    bottom: 155px;
+    left: 52.7%;
+    background-color: rgba(2, 102, 193, 0.2);
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.education h3 {
+  font-size: 21px;
+  line-height: 1;
+  margin: 0 0 0 120px;
+
+  @include vp-1199 {
+    margin-left: 45px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 5px;
+  }
+}
+
+.training__education div::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  bottom: -7px;
+  background-color: #0266c1;
+  border-radius: 50%;
+
+  @include vp-1199 {
+    bottom: 58%;
+  }
+
+  @include vp-767 {
+    left: 19px;
+    bottom: auto;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.training__education div::after {
+  display: none;
+
+  @include vp-1199 {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #0266c1;
+    border-radius: 50%;
+    top: 53.5%;
+    display: block;
+  }
+
+  @include vp-767 {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 180px;
+    background-color: rgba(2, 102, 193, 0.1);
+    top: 25.5%;
+    left: 24px;
+    display: block;
+  }
+}
+
+.education span {
+  max-width: 277px;
+
+  @include vp-1199 {
+    max-width: 220px;
+  }
+
+  @include vp-767 {
+    max-width: 190px;
+  }
+}
+
+.education__icon {
+  margin-right: 15px;
+
+  @include vp-767 {
+    width: 19px;
+    height: 19px;
+  }
+}

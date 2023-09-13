@@ -1,0 +1,22 @@
+.confidancial {
+  padding-right: 90px;
+
+  @include vp-1199 {
+    padding-right: 0;
+  }
+}
+
+.confidancial__link {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: o auto;
+  padding-top: 20px;
+  display: block;
+
+  @include vp-767 {
+    text-align: left;
+  }
+}

@@ -1,0 +1,349 @@
+.hero {
+  background-image: image-set("../img/hero/caucasus-photo.jpg" 1x, "../img/hero/caucasus-photo@2x.jpg" 2x);
+  background-size: cover;
+  padding-bottom: 63px;
+  background-color: #547aaa;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include vp-1199 {
+    padding-bottom: 85px;
+    background-image: image-set("../img/hero/caucasus-photo-tablet.jpg" 1x, "../img/hero/caucasus-photo-tablet@2x.jpg" 2x);
+    background-size: cover;
+  }
+
+  @include vp-767 {
+    background-image: image-set("../img/hero/caucasus-photo-mobile.jpg" 1x, "../img/hero/caucasus-photo-mobile@2x.jpg" 2x);
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 32px;
+  }
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+
+  @include vp-1199 {
+    max-width: 1199px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.hero__slider-wrapper {
+  padding: 80px 45px 0 120px;
+
+  @include vp-1199 {
+    max-width: 1199px;
+    padding: 0 42px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+.hero__wrapper {
+  position: relative;
+
+  @include vp-1199 {
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+  }
+}
+
+.hero__text h2 {
+  font-size: 77px;
+  font-weight: 800;
+  line-height: 77px;
+  color: $color-default-white;
+  padding: 0 120px 23px 0;
+  padding-bottom: 23px;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    font-size: 56px;
+    line-height: 56px;
+    padding: 0 0 12px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.hero__text p {
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-default-white;
+  padding-bottom: 38px;
+  max-width: 460px;
+  margin: 0;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    padding-bottom: 29px;
+  }
+
+  @include vp-767 {
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 21px;
+  }
+}
+
+.hero__info .btn {
+  padding: 16px 20px;
+  width: 220px;
+  text-align: center;
+  display: block;
+  margin-bottom: 151px;
+  background-color: #0266c1;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 206px;
+  }
+
+  @include vp-767 {
+    width: 180px;
+  }
+
+  &:active {
+    background-color: #1c3374;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+    color: #1c3374;
+    border: 1px solid #1c3374;
+  }
+
+  &:disabled {
+    background-color: rgba(2, 102, 193, 0.1);
+    color: #ffffff;
+  }
+}
+
+.hero__details {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.hero__details ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.hero__details li {
+  display: flex;
+  font-size: 12px;
+  line-height: 1;
+  color: $color-default-white;
+  padding: 15px 19px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero__details svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+  fill: $color-default-white;
+  margin-right: 8px;
+}
+
+.hero__video-wrapper {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-image: image-set("../img/hero/video.jpg" 1x, "../img/hero/video@2x.jpg" 2x);
+  background-size: cover;
+  background-color: #1e6a9f;
+  bottom: 105px;
+  right: 75px;
+  width: 482px;
+  height: 317px;
+
+  @include vp-1199 {
+    position: relative;
+    margin: 15px auto 65px;
+    right: 0;
+    width: 442px;
+    height: 300px;
+    background: image-set("../img/hero/video-tablet.jpg" 1x, "../img/hero/video-tablet@2x.jpg" 2x);
+    bottom: 0;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+
+  @include vp-767 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.hero__video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.hero__video-button {
+  position: absolute;
+  display: block;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  background: transparent url("../img/sprite/hero-play.svg") no-repeat;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    background: transparent url("../img/sprite/hero-play.svg") no-repeat;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: transparent url("../img/sprite/hero-play.svg") no-repeat;
+  }
+
+  &:active {
+    background: transparent url("../img/sprite/hero-play.svg") no-repeat;
+  }
+}
+
+.hero__image-wrapper {
+  position: absolute;
+  width: 410px;
+  height: 459px;
+  bottom: 60px;
+  right: 0;
+
+  @include vp-1199 {
+    margin: 0 auto;
+    width: 442px;
+    height: 365px;
+    bottom: 17px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.hero__image-wrapper-left {
+  width: 308px;
+  height: 407px;
+  right: 115px;
+  top: 100px;
+
+  @include vp-1199 {
+    width: 308px;
+    height: 337px;
+    right: 255px;
+    top: 415px;
+  }
+}
+
+.hero__image-wrapper-right {
+  width: 277px;
+  height: 366px;
+  right: 15px;
+  top: 195px;
+
+  @include vp-1199 {
+    width: 236px;
+    height: 312px;
+    right: 120px;
+    top: 470px;
+  }
+}
+
+.hero__audio-wrapper {
+  position: absolute;
+  width: 340px;
+  height: 220px;
+  bottom: 200px;
+  right: 15px;
+
+  @include vp-1199 {
+    position: relative;
+    margin: 0 auto;
+    top: 20px;
+    right: 0;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.hero__slider-wrapper .swiper {
+  @include vp-1199 {
+    padding-bottom: 68px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 69px;
+  }
+}
+
+.hero__slider-wrapper .swiper-pagination-bullet {
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+  opacity: 1;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.hero__slider-wrapper .swiper-pagination-bullet-active {
+  background-color: $color-default-white;
+}
+
+.hero__slider-wrapper .swiper-pagination {
+  text-align: right;
+  bottom: 25px;
+  left: auto;
+  right: 5.3%;
+
+  @include vp-1199 {
+    text-align: center;
+    bottom: 0;
+    left: 0;
+  }
+}

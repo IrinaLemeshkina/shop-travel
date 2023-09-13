@@ -1,0 +1,232 @@
+.advantages {
+  margin: 0;
+  margin-top: 30px;
+
+  @include vp-1199 {
+    margin-top: 15px;
+  }
+
+  @include vp-767 {
+    margin-top: 20px;
+  }
+}
+
+.advantages h2 {
+  margin: 0 auto 47px;
+  padding: 48px 0 0 0;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 35px;
+  letter-spacing: 0;
+  text-align: center;
+
+  @include vp-1199 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 48px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+  }
+}
+
+.advantages h2::after {
+  content: attr(data-value);
+  position: absolute;
+  left: 34%;
+  top: 54.8%;
+  font-size: 55px;
+  font-weight: 800;
+  line-height: 1;
+  opacity: 0.03;
+
+  @include vp-1199 {
+    left: 28%;
+    top: 53.2%;
+    font-size: 40px;
+  }
+
+  @include vp-767 {
+    font-size: 26px;
+    left: 25px;
+    top: 32px;
+  }
+}
+
+.advantages__swiper {
+  text-align: center;
+  z-index: 2;
+  padding: 0 90px;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.advantages__swiper-wrapper {
+  padding: 0 0 85px 0;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px 27px;
+    padding: 0 0 55px 0;
+    justify-content: center;
+  }
+
+  @include vp-767 {
+    gap: 15px;
+  }
+}
+
+.advantages__card {
+  cursor: grab;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  background-color: $color-default-white;
+  width: 380px;
+  height: auto;
+  padding: 40px 20px 25px;
+
+  @include vp-1199 {
+    width: 325px;
+    padding: 30px 20px 15px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 20px 10px 7px;
+  }
+}
+
+.advantages .swiper-button {
+  position: absolute;
+  top: 403px;
+  width: 37px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 13px;
+  background-color: #0266c1;
+  fill: $color-default-white;
+  z-index: 2;
+  cursor: pointer;
+
+  @include vp-1199 {
+    display: none;
+  }
+
+  &-prev {
+    right: 722px;
+    left: auto;
+    transform: translate(0, -10%);
+    background-image: url("../img/sprite/arrow-left.svg");
+    fill: $color-default-white;
+
+    &:hover,
+    &:focus {
+      background-image: url("../img/sprite/arrow-left-hover.svg");
+      background-size: 37px 35px;
+      background-color: $color-default-white;
+    }
+
+    &:active {
+      background-image: url("../img/sprite/arrow-left-active.svg");
+      background-size: 37px 35px;
+      background-color: #1c3374;
+    }
+  }
+
+  &-next {
+    left: 722px;
+    right: auto;
+    transform: translate(0, -10%);
+    background-image: url("../img/sprite/arrow-right.svg");
+    fill: $color-default-white;
+
+    &:hover,
+    &:focus {
+      background-image: url("../img/sprite/arrow-right-hover.svg");
+      background-size: 37px 35px;
+      background-color: $color-default-white;
+    }
+
+    &:active {
+      background-image: url("../img/sprite/arrow-right-active.svg");
+      background-size: 37px 35px;
+      background-color: #1c3374;
+      fill: #ffffff;
+    }
+  }
+}
+
+.advantages__icon {
+  display: block;
+  border: #0266c1 1px solid;
+  width: 54px;
+  height: 54px;
+  padding: 14.5px;
+  margin: 0 auto 27px;
+
+  @include vp-1199 {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 42px;
+    padding: 11px;
+  }
+}
+
+.advantages__icon svg {
+  @include vp-1199 {
+    width: 16.36px;
+    height: 18.18px;
+  }
+}
+
+.advantages h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 18px;
+
+  @include vp-1199 {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.advantages__info p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: center;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
